@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+  color: #333;
+  background-color: #f7f7f7;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.countries {
+  display: flex;
+  font-size: 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.country {
+  background-color: #fff;
+  box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+  font-size: 1.4rem;
+  width: 22rem;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  transition: all 0.3s ease;
+  /* overflow: hidden; */
+}
+
+.country:hover {
+  transform: translateY(-3px);
+}
+
+.neighbour::before {
+  content: "Neighbour Country";
+  width: 100%;
+  position: absolute;
+  top: -3rem;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.neighbour {
+  transform: scale(0.9);
+}
+
+.country__img {
+  width: 22rem;
+  height: 13rem;
+  object-fit: cover;
+  background-color: #eee;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+}
+
+.country__data {
+  padding: 3rem;
+}
+
+.country__name {
+  font-size: 2.2rem;
+  margin-bottom: 0.7rem;
+}
+
+.country__region {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.country__row:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.country__row span {
+  display: inline-block;
+  margin-right: 0.8rem;
+  font-size: 1.8rem;
+}
+
+.search-box {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 24px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.input-country {
+  font-size: 1rem;
+  padding: 12px 16px;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  background: white;
+  outline: none;
+  transition: all 0.3s ease;
+  min-width: 280px;
+  font-weight: 500;
+}
+
+.input-country:focus {
+  border-color: #667eea;
+}
+
+.btn-search {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-search:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .search-box {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .input-country {
+    min-width: 100%;
+  }
+
+  .btn-search {
+    width: 100%;
+  }
+
+  .countries {
+    gap: 1rem;
+  }
+}
