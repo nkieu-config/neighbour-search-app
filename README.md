@@ -15,6 +15,12 @@ Search for any country to instantly view rich data including population, languag
 
 ---
 
+## 📸 Screenshots
+
+<img src="public/screenshot.png" alt="Neighbour Search Screenshot" width="100%" height>
+
+---
+
 ## ✨ Features
 
 - 🔍 **Country Search by Name**
